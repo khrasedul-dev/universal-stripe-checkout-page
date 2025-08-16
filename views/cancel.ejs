@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Inter', Arial, sans-serif; background: linear-gradient(120deg, #ffe0e0 0%, #f8fafc 100%); color: #222; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .container { background: #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.10); border-radius: 28px; padding: 56px 40px; max-width: 420px; width: 100%; text-align: center; position: relative; }
+    .icon { font-size: 3.5rem; color: #ef4444; margin-bottom: 18px; }
+    h1 { font-size: 2.2rem; font-weight: 700; color: #ef4444; margin-bottom: 12px; letter-spacing: -1px; }
+    p { font-size: 1.15rem; color: #444; margin-bottom: 18px; }
+    .details { font-size: 1rem; color: #555; margin-bottom: 28px; }
+    .info-list { list-style: none; padding: 0; margin: 0 0 24px 0; }
+    .info-list li { background: #ffe0e0; color: #222; border-radius: 8px; margin-bottom: 10px; padding: 10px 16px; font-size: 0.98rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 1px 4px rgba(239,68,68,0.04); }
+    .info-list .emoji { font-size: 1.2rem; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, #ef4444 0%, #f87171 100%); color: #fff; font-weight: 600; padding: 14px 36px; border-radius: 10px; text-decoration: none; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(239,68,68,0.10); transition: background 0.2s, box-shadow 0.2s, transform 0.2s; border: none; cursor: pointer; }
+    .cta-btn:hover { background: linear-gradient(90deg, #f87171 0%, #ef4444 100%); box-shadow: 0 6px 24px rgba(239,68,68,0.18); transform: translateY(-2px) scale(1.04); }
+    .cta-icon { font-size: 1.3em; }
+    .bot-info { background: #fff7f7; border-radius: 10px; padding: 16px; margin-bottom: 18px; font-size: 0.98rem; color: #ef4444; box-shadow: 0 1px 4px rgba(239,68,68,0.04); }
+    @media (max-width: 600px) { .container { padding: 18px 4px; max-width: 98vw; } h1 { font-size: 1.3rem; } .icon { font-size: 2.2rem; } .cta-btn { padding: 10px 18px; font-size: 0.95rem; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">❌</div>
+    <h1><%= title %></h1>
+    <p><%= message %></p>
+    <div class="details"><%= details %></div>
+    <div class="bot-info">You can always restart the payment process in the Telegram bot.<br>For your security, no charges were made.</div>
+    <ul class="info-list">
+      <li><span class="emoji">💡</span> Payment was not completed</li>
+      <li><span class="emoji">🔄</span> You can try again anytime</li>
+      <li><span class="emoji">💬</span> For help, contact support</li>
+    </ul>
+    <a href="https://t.me/<%= username %>" class="cta-btn"> <span class="cta-icon">🤖</span>Back to Bot</a>
+  </div>
+</body>
+</html>
